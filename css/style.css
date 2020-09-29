@@ -19,6 +19,14 @@ h1 {
   /* shadow: 5em #ccc; */
 
 }
+.h2-container {
+  background-color: pink;
+  color:black;
+}
+
+h2{
+  text-align: center;
+}
 
 .grid-container{
   display: flex;
