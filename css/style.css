@@ -1,6 +1,16 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
+
+body{
   background-color: #FFD1DC;
   margin: 0;
+  padding: 0;
+}
+
+
+.container {
+  max-width: 900px;
+  background-color: #FFD1DC;
+  margin: auto;
   padding: 0;
 }
 
@@ -16,29 +26,64 @@ h1 {
   margin: auto;
   width: 30em;
   border-radius: 1em;
-  /* shadow: 5em #ccc; */
-
+  box-shadow: 3px 3px 4px #abc5fe;
 }
+
+nav {
+  margin: auto;
+}
+
+.playerX{
+  background-color: #daffe7;
+  border-radius: .2em;
+  border: 1px solid #abc5fe;
+  box-shadow: 2px 2px 5px black;
+  font-family: 'Rubik', sans-serif;
+}
+.playerO{
+  background-color: #daffe7;
+  border-radius: .5em;
+  border: 1px solid #abc5fe;
+  box-shadow: 2px 2px 5px black;
+  font-family: 'Rubik', sans-serif;
+}
+
+.scoreboard{
+  text-align: right;
+  font-weight: bold;
+  display: inline-block;
+}
+
 .h2-container {
   background-color: pink;
-  color:black;
-}
-
-h2{
+  max-width: 900px;
   text-align: center;
 }
 
+h2 {
+  padding-right: 40px;
+  padding-left: 40px;
+  display: inline;
+  font-family: 'Rubik', sans-serif;
+}
+
+.game-area{
+  max-width: 600px;
+  margin:auto;
+}
 .grid-container{
-  display: flex;
+  margin: auto;
+  display: inline-flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+  position: center;
+  /* justify-content: center; */
   width: 350px;
   height: 350px;
-  margin: auto;
+  position: center;
   /* background-color: blue; */
-  /* background-color: #FFD1DC; */
+  /* background-color: pink; */
   border-radius: .5em;
 }
 
@@ -48,13 +93,11 @@ h2{
   height: 100px;
   margin: 5px;
   border-radius: .5em;
-  background: radial-gradient(#FFD1DC);
-  border: 2px solid #daffe7;
+  background: radial-gradient(#FFD1DC, white);
+  border: 3px solid #daffe7;
+  box-shadow: 2px 2px 3px black;
 }
 
-.button {
-  background-color: pink;
-}
 .XImage {
   width:100px;
   height:100px;
@@ -74,4 +117,18 @@ button{
   background-color: #daffe7;
   color: lightblue;
   border: 3px lightblue;
+  box-shadow: 2px 2px 3px black;
+  border-radius: .2em;
+  display: block;
+  margin-top: 50px;
+}
+.button {
+  display: inline-block;
+  padding: 20px;
+
+}
+
+footer{
+  background-color: pink;
+  height: 20px
 }

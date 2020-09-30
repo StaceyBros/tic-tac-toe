@@ -10,25 +10,43 @@
   crossorigin="anonymous"></script>
 </head>
 <body>
+  <div class = "container">
 
-  <div class="h1-container">
-  <h1>Play Tic-Tac-Toe</h1>
+    <div class="h1-container">
+      <h1>Play Tic-Tac-Toe</h1>
   </div>
-  <div class="h2-container">
-  <h2>Scoreboard  X <span id="X">0</span> : <span id="O">0</span> O</h2>
+
+  <nav>
+    <div class="h2-container">
+
+      <h2 class ="playerX">Player X</h2>
+
+      <h2>Scoreboard</h2>
+
+      <h2 class ="playerO">Player O</h2>
+
+    </div>
+
+  </nav>
+
+  <div class ="game-area">
+  <div class="button">
+    <button id="start">Start / Reset</button>
+    <button id="newGame">New Game</button>
   </div>
+
+  
+
   <div class="grid-container">
 
+    <!-- //Blocks and images in the blocks -->
     <div id="0" class="block"><img src="images/X.png" class="XImage" id ="XSymbol" alt="X"><img src="images/O.png" class="OImage" id ="OSymbol" alt="O"></div>
-
-
 
     <div id="1" class="block"><img src="images/X.png" class="XImage" id ="XSymbol" alt="X"><img src="images/O.png" class="OImage" id ="OSymbol" alt="O"></div>
 
     <div id="2" class="block"><img src="images/X.png" class="XImage" id ="XSymbol" alt="X"><img src="images/O.png" class="OImage" id ="OSymbol" alt="O"></div>
 
     <div id="3" class="block"><img src="images/X.png" class="XImage" id ="XSymbol" alt="X"><img src="images/O.png" class="OImage" id ="OSymbol" alt="O"></div>
-
 
     <div id="4" class="block"><img src="images/X.png" class="XImage" id ="XSymbol" alt="X"><img src="images/O.png" class="OImage" id ="OSymbol" alt="O"></div>
 
@@ -40,13 +58,12 @@
 
     <div id="8" class="block"><img src="images/X.png" class="XImage" id ="XSymbol" alt="X"><img src="images/O.png" class="OImage" id ="OSymbol" alt="O"></div>
 
-    <div class="button">
-    <button id="reset">Reset</button>
-    <button id="start">Start - Pick Player</button>
-    <button id="newGame">New Game</button>
     </div>
+    <div class = "scoreboard">X<span id="X">0</span> : <span id="O">0</span> O</div>
+    </div>
+    <footer></footer>
   </div>
-
+</div>
 
 <script src="js/jquery.js"></script>
 <script src="js/game.js"></script>
