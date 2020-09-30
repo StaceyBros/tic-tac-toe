@@ -37,15 +37,41 @@ h2{
   width: 350px;
   height: 350px;
   margin: auto;
-  background-color: #FFD1DC;
+  /* background-color: blue; */
+  /* background-color: #FFD1DC; */
   border-radius: .5em;
 }
 
 .block{
+  /* position: center; */
   width: 100px;
   height: 100px;
   margin: 5px;
   border-radius: .5em;
-  background-color: red;
-  border: 1px solid black;
+  background: radial-gradient(#FFD1DC);
+  border: 2px solid #daffe7;
+}
+
+.button {
+  background-color: pink;
+}
+.XImage {
+  width:100px;
+  height:100px;
+}
+.OImage {
+  width:100px;
+  height:100px;
+}
+
+
+img {
+  width:350px;
+  height:350px;
+}
+
+button{
+  background-color: #daffe7;
+  color: lightblue;
+  border: 3px lightblue;
 }
