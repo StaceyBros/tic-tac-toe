@@ -21,8 +21,6 @@
 
       <h2 class ="playerX">Player X</h2>
 
-      <h2>Scoreboard</h2>
-
       <h2 class ="playerO">Player O</h2>
 
     </div>
@@ -30,12 +28,13 @@
   </nav>
 
   <div class ="game-area">
+
   <div class="button">
     <button id="start">Start / Reset</button>
     <button id="newGame">New Game</button>
   </div>
 
-  
+
 
   <div class="grid-container">
 
@@ -59,7 +58,10 @@
     <div id="8" class="block"><img src="images/X.png" class="XImage" id ="XSymbol" alt="X"><img src="images/O.png" class="OImage" id ="OSymbol" alt="O"></div>
 
     </div>
-    <div class = "scoreboard">X<span id="X">0</span> : <span id="O">0</span> O</div>
+      <div class="score-board">
+        <h2>Scoreboard</h2>
+        <div id = "score">X<span id="X">0</span> : <span id="O">0</span> O</div>
+      </div>
     </div>
     <footer></footer>
   </div>

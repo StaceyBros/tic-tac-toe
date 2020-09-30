@@ -29,29 +29,28 @@ h1 {
   box-shadow: 3px 3px 4px #abc5fe;
 }
 
-nav {
-  margin: auto;
-}
-
 .playerX{
   background-color: #daffe7;
-  border-radius: .2em;
+  border-radius: .3em;
   border: 1px solid #abc5fe;
   box-shadow: 2px 2px 5px black;
   font-family: 'Rubik', sans-serif;
 }
 .playerO{
   background-color: #daffe7;
-  border-radius: .5em;
+  border-radius: .3em;
   border: 1px solid #abc5fe;
   box-shadow: 2px 2px 5px black;
   font-family: 'Rubik', sans-serif;
+  margin-left: 190px;
 }
 
-.scoreboard{
+.score-board{
   text-align: right;
-  font-weight: bold;
+  /* font-weight: bold; */
   display: inline-block;
+  width: 200px;
+
 }
 
 .h2-container {
@@ -70,6 +69,7 @@ h2 {
 .game-area{
   max-width: 600px;
   margin:auto;
+  margin-top: 20px;
 }
 .grid-container{
   margin: auto;
@@ -77,8 +77,6 @@ h2 {
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  position: center;
-  /* justify-content: center; */
   width: 350px;
   height: 350px;
   position: center;
@@ -120,12 +118,11 @@ button{
   box-shadow: 2px 2px 3px black;
   border-radius: .2em;
   display: block;
-  margin-top: 50px;
+  margin-top: 30px;
 }
 .button {
   display: inline-block;
-  padding: 20px;
-
+  padding: 20px 20px 0px 20px;
 }
 
 footer{

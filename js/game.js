@@ -90,7 +90,6 @@ $("block").on(`click`);
     winner = null;
     $(".block").removeClass("X");
     $(".block").removeClass("O");
-    $(".block").empty();
     $(".XImage").hide();
     $(".OImage").hide();
     gameOver = 0;
@@ -99,6 +98,8 @@ $("block").on(`click`);
   $('#start').on('click', function(){
     $(".block").css({background: "#FFD1DC"});
     winner = null;
+    $(".block").removeClass("X");
+    $(".block").removeClass("O");
     $("#X").text("0");
     $("#O").text("0");
     $(".XImage").hide();
