@@ -1,6 +1,11 @@
 $(".XImage").hide();
 $(".OImage").hide();
 
+// // $(".draw").hide();
+$(".x-wins").hide();
+$(".o-wins").hide();
+
+
 // let gameOver = false;
 let scoreO = 0;
 let scoreX = 0;
@@ -20,7 +25,7 @@ const player = function (player){
   }
   else if (player === "x"){
   turn = 2;
-  $$(`.playerO`).removeClass("new-playerO");
+  $(`.playerO`).removeClass("new-playerO");
   $(`.playerX`).addClass("new-playerX");
 
 };
@@ -82,7 +87,7 @@ $(".block").on(`click`, function() {
 
 $("block").on(`click`);
 
-  $('#newGame').on('click', function(){
+  $('#new-game').on('click', function(){
     winner = null;
     $(".block").removeClass("new-block");
     $(".block").removeClass("X");
