@@ -5,8 +5,6 @@ $("#draw").hide();
 $("#x-win").hide();
 $("#o-win").hide();
 
-
-// let gameOver = false;
 let scoreO = 0;
 let scoreX = 0;
 let gameCount = 0;
@@ -95,8 +93,8 @@ $("block").on(`click`);
 
   $('#new-game').on('click', function(){
     winner = null;
-    $("#x-win").fadeOut(1000);
-    $("#o-win").fadeOut(1000);
+    $("#x-win").fadeOut(500);
+    $("#o-win").fadeOut(500);
     $(".block").removeClass("new-block");
     $(".block").removeClass("X");
     $(".block").removeClass("O");
@@ -106,13 +104,11 @@ $("block").on(`click`);
   });
 
   $('#start').on('click', function(){
-    // $(".block").css({background: "radial-gradient (#FFD1DC, white"});
     winner = null;
-
     $(".block").removeClass("X");
     $(".block").removeClass("O");
-    $("#x-win").fadeOut(1000);
-    $("#o-win").fadeOut(1000);
+    $("#x-win").fadeOut(500);
+    $("#o-win").fadeOut(500);
     $(".block").removeClass("new-block");
     $("#X").text("0");
     $("#O").text("0");
@@ -123,11 +119,6 @@ $("block").on(`click`);
     scoreX = 0;
     player();
   });
-
-
-// const off = $(".block").click(function() {
-//       $("")
-// });
 
 //conditions to check if any player has won
 const winCheck = function(symbol, player, gameCount) {
