@@ -15,14 +15,13 @@ const player = function (player){
   player =  prompt("Are you x or o?");
   if (player === "o"){
   turn = 1;
-  $(`.playerX`).css("backgroundColor", "#daffe7"); $(`.playerX`).css({boxShadow: "10px, 10px, 10px, black"});
-  $(`.playerO`).css({backgroundColor: "#abc5fe"});
+  $(`.playerO`).addClass("new-playerO");
+  $(`.playerX`).removeClass("new-playerX");
   }
   else if (player === "x"){
   turn = 2;
-  $(`.playerO`).css({backgroundColor: "#daffe7"});
-  $(`.playerX`).css({boxShadow: "10px, 10px, 10px, black"});
-  $(`.playerX`).css({backgroundColor: "#abc5fe"});
+  $$(`.playerO`).removeClass("new-playerO");
+  $(`.playerX`).addClass("new-playerX");
 
 };
 };
@@ -104,6 +103,8 @@ $("block").on(`click`);
     $(".XImage").hide();
     $(".OImage").hide();
     gameCount = 0;
+    scoreO = 0;
+    scoreX = 0;
     player();
   });
 
