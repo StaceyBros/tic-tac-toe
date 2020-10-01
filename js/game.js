@@ -1,9 +1,9 @@
 $(".XImage").hide();
 $(".OImage").hide();
 
-// // $(".draw").hide();
-$(".x-wins").hide();
-$(".o-wins").hide();
+$("#draw").hide();
+$("#x-win").hide();
+$("#o-win").hide();
 
 
 // let gameOver = false;
@@ -34,11 +34,13 @@ const player = function (player){
 const scoreBoard = function(player){
 
     if ( player === "O" ){
+      $("#o-win").fadeIn(1000).delay(3000).fadeOut(1000);
       scoreO = scoreO + 1;
       $(`#O`).text(`${scoreO}`);
       $(".block").removeClass("X");
     }
       else if ( player === "X" ){
+      $("#x-win").fadeIn(1000).delay(3000).fadeOut(1000);
       scoreX = scoreX + 1;
       $(`#X`).text(`${scoreX}`);
       $(".block").removeClass("O");
@@ -64,6 +66,8 @@ $(".block").on(`click`, function() {
     turn = 2;
     $(`.playerO`).removeClass("new-playerO");
     $(`.playerX`).addClass("new-playerX");
+    $(".playerO").fadeTo( "slow", 0.50 );
+    $(".playerX").fadeTo( "slow", 1 );
     $(this).find(".OImage").show();
     $(this).addClass("O");
     gameCount = gameCount + 1;
@@ -76,6 +80,8 @@ $(".block").on(`click`, function() {
     turn = 1;
     $(`.playerO`).addClass("new-playerO");
     $(`.playerX`).removeClass("new-playerX");
+    $(".playerX").fadeTo( "slow", 0.50 );
+    $(".playerO").fadeTo( "slow", 1 );
     $(this).find(".XImage").show();
     $(this).addClass("X");
     gameCount = gameCount + 1;
@@ -213,6 +219,9 @@ const winCheck = function(symbol, player, gameCount) {
         else if (gameCount === 9){
               console.log("Look a draw");
               gameCount = 0;
+              $("#draw").fadeIn(1000).delay(3000).fadeOut(1000);
+              $( ".block" ).slideDown( "slow");
+
         } else {
             return false;
         }
