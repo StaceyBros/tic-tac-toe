@@ -2,7 +2,7 @@
 
 body{
   background-color: #FFD1DC;
-  margin: 0;
+  margin-top: 200px;
   padding: 0;
 }
 
@@ -28,7 +28,6 @@ h1 {
   border-radius: 1em;
   box-shadow: 3px 3px 4px #abc5fe;
 }
-
 .playerX{
   background-color: #daffe7;
   border-radius: .3em;
@@ -99,6 +98,22 @@ button{
   display: inline-block;
   padding: 20px 20px 0px 110px;
 }
+
+#start:hover {
+  color:#ffc100;
+  box-shadow: 7px 7px 9px black;
+}
+
+#new-game:hover {
+  color:#ffc100;
+  box-shadow: 7px 7px 9px black;
+}
+
+.block:hover {
+  box-shadow: 5px 5px 7px black;
+}
+
+
 
 .game-area{
   max-width: 800px;
