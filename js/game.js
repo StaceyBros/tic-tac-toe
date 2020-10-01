@@ -1,7 +1,7 @@
 $(".XImage").hide();
 $(".OImage").hide();
 
-let gameOver = false;
+// let gameOver = false;
 let scoreO = 0;
 let scoreX = 0;
 let gameCount = 0;
@@ -58,9 +58,8 @@ $(".block").on(`click`, function() {
   else if (turn === 1){
     console.log("Player O");
     turn = 2;
-    $(`.playerO`).css({backgroundColor: "#daffe7"});
-    $(`.playerX`).css({backgroundColor: "#abc5fe"});
-    $(`.playerX`).css({boxShadow: "10px, 10px, 10px, black"});
+    $(`.playerO`).removeClass("new-playerO");
+    $(`.playerX`).addClass("new-playerX");
     $(this).find(".OImage").show();
     $(this).addClass("O");
     gameCount = gameCount + 1;
@@ -71,9 +70,8 @@ $(".block").on(`click`, function() {
   else if (turn === 2){
     console.log("Player X");
     turn = 1;
-    $(`.playerX`).css({backgroundColor: "#daffe7"});
-    $(`.playerO`).css({backgroundColor: "#abc5fe"});
-    $(`.playerX`).css({boxShadow: "10px, 10px, 10px, black"});
+    $(`.playerO`).addClass("new-playerO");
+    $(`.playerX`).removeClass("new-playerX");
     $(this).find(".XImage").show();
     $(this).addClass("X");
     gameCount = gameCount + 1;
@@ -86,25 +84,26 @@ $(".block").on(`click`, function() {
 $("block").on(`click`);
 
   $('#newGame').on('click', function(){
-    $(".block").css({background: "#FFD1DC"});
     winner = null;
+    $(".block").removeClass("new-block");
     $(".block").removeClass("X");
     $(".block").removeClass("O");
     $(".XImage").hide();
     $(".OImage").hide();
-    gameOver = 0;
+    gameCount = 0;
   });
 
   $('#start').on('click', function(){
-    $(".block").css({background: "#FFD1DC"});
+    // $(".block").css({background: "radial-gradient (#FFD1DC, white"});
     winner = null;
     $(".block").removeClass("X");
     $(".block").removeClass("O");
+    $(".block").removeClass("new-block");
     $("#X").text("0");
     $("#O").text("0");
     $(".XImage").hide();
     $(".OImage").hide();
-    gameOver = 0;
+    gameCount = 0;
     player();
   });
 
@@ -120,12 +119,9 @@ const winCheck = function(symbol, player, gameCount) {
           $("#1").hasClass(symbol) &&
           $("#2").hasClass(symbol))
         {
-            $("#0").css({background: "#daffe7"});
-            $("#1").css({background: "#daffe7"});
-            $("#2").css({background: "#daffe7"});
-            $("#0").css({border: "3px, solid blue"});
-            $("#1").css({border: "3px, solid blue"});
-            $("#2").css({border: "3px, solidblue"});
+            $("#0").addClass("new-block");
+            $("#1").addClass("new-block");
+            $("#2").addClass("new-block");
             winner = "symbol";
             console.log(symbol);
             scoreBoard(player);
@@ -135,9 +131,9 @@ const winCheck = function(symbol, player, gameCount) {
                 && $("#4").hasClass(symbol)
                 && $("#5").hasClass(symbol))
         {
-            $("#3").css({background: "#daffe7"});
-            $("#4").css({background: "#daffe7"});
-            $("#5").css({background: "#daffe7"});
+            $("#3").addClass("new-block");
+            $("#4").addClass("new-block");
+            $("#5").addClass("new-block");
             winner = "symbol";
             scoreBoard(player);
             return true;
@@ -146,9 +142,9 @@ const winCheck = function(symbol, player, gameCount) {
                 && $("#7").hasClass(symbol)
                 && $("#8").hasClass(symbol))
         {
-            $("#6").css({background: "#daffe7"});
-            $("#7").css({background: "#daffe7"});
-            $("#8").css({background: "#daffe7"});
+            $("#6").addClass("new-block");
+            $("#7").addClass("new-block");
+            $("#8").addClass("new-block");
             winner = "symbol";
             scoreBoard(player);
             return true;
@@ -157,9 +153,9 @@ const winCheck = function(symbol, player, gameCount) {
                 && $("#3").hasClass(symbol)
                 && $("#6").hasClass(symbol))
         {
-            $("#0").css({background: "#daffe7"});
-            $("#3").css({background: "#daffe7"});
-            $("#6").css({background: "#daffe7"});
+            $("#0").addClass("new-block");
+            $("#3").addClass("new-block");
+            $("#6").addClass("new-block");
             winner = "symbol";
             scoreBoard(player);
             return true;
@@ -168,9 +164,9 @@ const winCheck = function(symbol, player, gameCount) {
                 && $("#4").hasClass(symbol)
                 && $("#7").hasClass(symbol))
         {
-            $("#1").css({background: "#daffe7"});
-            $("#4").css({background: "#daffe7"});
-            $("#7").css({background: "#daffe7"});
+            $("#1").addClass("new-block");
+            $("#4").addClass("new-block");
+            $("#7").addClass("new-block");
             winner = "symbol";
             scoreBoard(player);
             return true;
@@ -179,9 +175,9 @@ const winCheck = function(symbol, player, gameCount) {
                 && $("#5").hasClass(symbol)
                 && $("#8").hasClass(symbol))
         {
-            $("#2").css({background: "#daffe7"});
-            $("#5").css({background: "#daffe7"});
-            $("#8").css({background: "#daffe7"});
+            $("#2").addClass("new-block");
+            $("#5").addClass("new-block");
+            $("#8").addClass("new-block");
             winner = "symbol";
             scoreBoard(player);
             return true;
@@ -190,9 +186,9 @@ const winCheck = function(symbol, player, gameCount) {
                 && $("#4").hasClass(symbol)
                 && $("#8").hasClass(symbol))
         {
-            $("#0").css({background: "#daffe7"});
-            $("#4").css({background: "#daffe7"});
-            $("#8").css({background: "#daffe7"});
+            $("#0").addClass("new-block");
+            $("#4").addClass("new-block");
+            $("#8").addClass("new-block");
             winner = "symbol";
             scoreBoard(player);
             return true;
@@ -201,9 +197,9 @@ const winCheck = function(symbol, player, gameCount) {
                 && $("#4").hasClass(symbol)
                 && $("#6").hasClass(symbol))
         {
-            $("#2").css({background: "#daffe7"});
-            $("#4").css({background: "#daffe7"});
-            $("#6").css({background: "#daffe7"});
+            $("#2").addClass("new-block");
+            $("#4").addClass("new-block");
+            $("#6").addClass("new-block");
             winner = "symbol";
             scoreBoard(player);
             return true;
