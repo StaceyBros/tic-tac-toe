@@ -34,13 +34,13 @@ const player = function (player){
 const scoreBoard = function(player){
 
     if ( player === "O" ){
-      $("#o-win").fadeIn(1000).delay(3000).fadeOut(1000);
+      $("#o-win").fadeIn(1000)
       scoreO = scoreO + 1;
       $(`#O`).text(`${scoreO}`);
       $(".block").removeClass("X");
     }
       else if ( player === "X" ){
-      $("#x-win").fadeIn(1000).delay(3000).fadeOut(1000);
+      $("#x-win").fadeIn(1000)
       scoreX = scoreX + 1;
       $(`#X`).text(`${scoreX}`);
       $(".block").removeClass("O");
@@ -95,6 +95,8 @@ $("block").on(`click`);
 
   $('#new-game').on('click', function(){
     winner = null;
+    $("#x-win").fadeOut(1000);
+    $("#o-win").fadeOut(1000);
     $(".block").removeClass("new-block");
     $(".block").removeClass("X");
     $(".block").removeClass("O");
@@ -106,8 +108,11 @@ $("block").on(`click`);
   $('#start').on('click', function(){
     // $(".block").css({background: "radial-gradient (#FFD1DC, white"});
     winner = null;
+
     $(".block").removeClass("X");
     $(".block").removeClass("O");
+    $("#x-win").fadeOut(1000);
+    $("#o-win").fadeOut(1000);
     $(".block").removeClass("new-block");
     $("#X").text("0");
     $("#O").text("0");
