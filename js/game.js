@@ -93,8 +93,8 @@ $("block").on(`click`);
 
   $('#new-game').on('click', function(){
     winner = null;
-    $("#x-win").fadeOut(500);
-    $("#o-win").fadeOut(500);
+    $("#x-win").fadeOut(0);
+    $("#o-win").fadeOut(0);
     $(".block").removeClass("new-block");
     $(".block").removeClass("X");
     $(".block").removeClass("O");
@@ -107,8 +107,8 @@ $("block").on(`click`);
     winner = null;
     $(".block").removeClass("X");
     $(".block").removeClass("O");
-    $("#x-win").fadeOut(500);
-    $("#o-win").fadeOut(500);
+    $("#x-win").fadeOut(0);
+    $("#o-win").fadeOut(0);
     $(".block").removeClass("new-block");
     $("#X").text("0");
     $("#O").text("0");
