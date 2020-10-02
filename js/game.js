@@ -95,6 +95,7 @@ $("block").on(`click`);
     winner = null;
     $("#x-win").fadeOut(0);
     $("#o-win").fadeOut(0);
+    $("#draw").fadeOut(0);
     $(".block").removeClass("new-block");
     $(".block").removeClass("X");
     $(".block").removeClass("O");
@@ -109,6 +110,7 @@ $("block").on(`click`);
     $(".block").removeClass("O");
     $("#x-win").fadeOut(0);
     $("#o-win").fadeOut(0);
+    $("#draw").fadeOut(0);
     $(".block").removeClass("new-block");
     $("#X").text("0");
     $("#O").text("0");
@@ -215,7 +217,7 @@ const winCheck = function(symbol, player, gameCount) {
         else if (gameCount === 9){
               console.log("Look a draw");
               gameCount = 0;
-              $("#draw").fadeIn(1000).delay(3000).fadeOut(1000);
+              $("#draw").fadeIn(1000);
               $( ".block" ).slideDown( "slow");
 
         } else {
