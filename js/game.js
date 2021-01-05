@@ -1,3 +1,5 @@
+$( document ).ready(function() {
+
 $(".XImage").hide();
 $(".OImage").hide();
 
@@ -12,7 +14,7 @@ let winner = null;
 
 let turn = 1;
 
-//Player can choose if they if they would like to be X or O
+//Player can choose if they would like to be X or O
 const player = function (player){
 
   player =  prompt("Are you x or o?");
@@ -88,7 +90,7 @@ $(".block").on(`click`, function() {
     }
 });
 
-
+// New game event listener
 $("block").on(`click`);
 
   $('#new-game').on('click', function(){
@@ -104,6 +106,7 @@ $("block").on(`click`);
     gameCount = 0;
   });
 
+  // Start game event listener
   $('#start').on('click', function(){
     winner = null;
     $(".block").removeClass("X");
@@ -122,7 +125,8 @@ $("block").on(`click`);
     player();
   });
 
-//conditions to check if any player has won
+// conditions to check if any player has won
+// win check is checked each players turn
 const winCheck = function(symbol, player, gameCount) {
 
       if  ($("#0").hasClass(symbol) &&
@@ -224,4 +228,6 @@ const winCheck = function(symbol, player, gameCount) {
             return false;
         }
     }
+  });
+
 });
